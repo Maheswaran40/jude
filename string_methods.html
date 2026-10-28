@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+
+    <!-- String Methods -->
+
+    <!-- length  , indexOf , charAt , includes , toUpperCase , toLowerCase , replace , trimStart , trimEnd , trim , toString  -->
+    
+    <script>
+
+        let data = "Hello World"
+        let str = "   Hello World    "
+        let num = 375
+
+        console.log(data.length)  // length => 11
+        console.log(data[1]) // position => e
+        console.log(data.indexOf("e")) // index => 1
+        console.log(data.charAt(4)) // position => o
+        console.log(data.includes("W")) // true
+        console.log(data.includes("X")) // false
+        console.log(data.toLowerCase()) // hello world
+        console.log(data.toUpperCase()) // HELLO WORLD
+        console.log(data.substr(0 , 5)) // Hello
+        console.log(data.replace("World" , "Js")) // Hello Js
+        console.log(str.trimStart()) // Hello World    
+        console.log(str.trimLeft()) // Hello World    
+        console.log(str.trimEnd()) //     Hello World
+        console.log(str.trimRight()) //     Hello World
+        console.log(str.trim()) // Hello World
+        console.log(num.toString()) // 375
+
+
+        let arr = ["HTML" , "CSS" , "BOOTSTRAP" , "JS"]
+
+        console.log(arr.length) // length => 4
+        console.log(arr.includes("CSS")) // true
+        console.log(arr.push("Hello"))
+        console.log(arr.pop())
+        console.log(arr.unshift("Hello"))
+        console.log(arr.shift())
+
+        console.log(arr)
+
+    </script>
+
+</body>
+</html>
