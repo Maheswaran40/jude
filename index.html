@@ -5,18 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-    
+/*     
+      body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      img{
+        animation: none;
+        transform: scale(1.5);
 
-
+      }
+      @keyframes spin {
+          from{
+            transform: rotateY(0deg) scale(0.5);
+          }
+          to{ 
+             transform: rotateY(780deg) scale(1.5);
+          }
+      } */
     </style>
   </head>
   <body>
-    <h1 id="h1tag" class="headingclass">heading 1</h1>
+    <!-- <h1 id="h1tag" class="headingclass" onclick="changeColor()" >heading 1</h1>
     <h1 id="h1tag" class="headingclass">heading 2</h1> 
+     <button onclick="changeColor()">remove</button>
 
     <div id="division">
      
-    </div>
+    </div> -->
+
+    <!-- <img src="./image/coin.png" height="200px" width="200px" alt="">
+<br><br><br>
+    <button onclick="spinFun()">spin</button> -->
+
+
+
+    <!-- <form onsubmit="formSubmit(event)">
+      <input type="text" placeholder="username" id="name">
+      <input type="email" placeholder="email" id="email">
+
+      <input type="submit">
+    </form> -->
+
+
+    <form >
+      <input type="number" placeholder="value1" id="value1">
+      <input type="number" placeholder="value2" id="value2"><br>
+      <button onclick="addFun(event)">Add</button>
+      <button  onclick="subFun(event)">sub</button>
+      <button  onclick="multFun(event)">Mult</button>
+      <button  onclick="diviFun(event)">divi</button>
+    </form>
+
+    <h1 id="output"></h1>
+
+
   </body>
 
   <script src="./index.js">
