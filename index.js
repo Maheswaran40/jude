@@ -1,117 +1,105 @@
-// function fun_name(parameters){
-//     // variable creation local
-//     statements()
-//     statements()
-//     statements()
-// }
-// fun_name(arguments) //function calling
-
-
-// function fun1(){
-//     var a=20
-//     console.log("function is working 1" , a);
-//     fun2(a)
-// }
-
-// fun1()
-
-
-// function fun2(a){
-//     console.log("function is working 2",a);
-
-// }
-
-
-
-// function fun2(a){
-//     if(a>100){
-//         console.log("function is working 2",a);
-//     }
-//     else if(){
-
-//     }
-//     else if(){
-
-//     }
-//     else if(){
-
-//     }
-//     else if(){
-
-//     }
-//     else{
-//         console.log("a is lesserthan 100");
-
-//     }
-
-// }
-
-
-// function fun2(a,b,c){
-//     console.log("function is working 2",a,b,c);
-
-// }
-
-// fun2(200,300,400)
-
-
-
-
-// function changeColor(){
-//     // document.getElementById("h1tag").style.color = "red"
-//     document.getElementById("h1tag").style.display = "none"
-// }
-
-
-
-// function spinFun(){
-//     document.getElementsByTagName("img")[0].style.animation = "spin 2s linear 1 "
-// }
-
-
-
-// function formSubmit(e){
-// e.preventDefault()
-// let username = document.getElementById("name").value
-// let email = document.getElementById("email").value
-// console.log(username,email);
-
-
-// }
-
-let data = document.getElementById("output")
-
-function addFun(e) {
-    e.preventDefault()
-    let value1 = Number(document.getElementById("value1").value)
-    let value2 = Number(document.getElementById("value2").value)
-    console.log("add", value1, value2);
-    let output =value1 +value2
-    data.innerHTML = `${value1} + ${value2} = ${output}`
-
+let fun1 = () => {
+    console.log("arrow function is running")
 }
 
-function subFun(e) {
-    e.preventDefault()
-    let value1 = document.getElementById("value1").value
-    let value2 = document.getElementById("value2").value
-    console.log("sub", value1, value2);
-
-}
-
-function multFun(e) {
-    e.preventDefault()
-    let value1 = document.getElementById("value1").value
-    let value2 = document.getElementById("value2").value
-    console.log("mult", value1, value2);
 
 
-}
+// setTimeout(() => {
+//     
+// }, 5000);
 
-function diviFun(e) {
-    e.preventDefault()
-    let value1 = document.getElementById("value1").value
-    let value2 = document.getElementById("value2").value
-    console.log("did", value1, value2);
+// let date = new Date()
 
-}
+// setInterval(() => {
+//     console.log(date.getSeconds());
+
+//     fun1()
+// }, 1000);
+
+
+// for , while , do while 
+
+// for(initialization ; condition ; +/-){
+// statement 
+// }
+
+// for(i=5 ; i >= 0 ; i--){
+//     console.log(i);
+// }
+
+// initialization
+// while(condition){
+//     statment()
+//     +/-
+// }
+
+// let i = 0
+// while(i <=5){
+//     console.log(i);
+//     i++
+
+// }
+
+
+
+// function checkPassword() {
+
+//     let correctPassword = "ilife123"
+
+//     let password = prompt("enter you password")
+//     // while (correctPassword != password) {
+//     //     alert("incorrect password")
+//     //     password = prompt("enter you password")
+//     // }
+    
+
+//     alert("password is correct")
+// }
+// checkPassword()
+
+
+// function checkPassword() {
+
+//     // let correctPassword = "ilife123"
+
+//     let password = prompt("enter you password")
+   
+
+//     for(correctPassword = "ilife123";correctPassword != password ;){
+//         alert("incorrect password")
+//         password = prompt("enter you password")
+//     }
+
+//     alert("password is correct")
+// }
+// checkPassword()
+
+
+// ininitialization
+// do{
+// statememt()
+// }
+// while(condition)
+
+
+// let age = 18
+// let vote =18
+// do{
+//     console.log("you're eligible");
+    
+// }
+// while(age == vote)
+
+
+// for (let i = 1; i <= 5; i++) {
+//     let row = "";
+//     console.log(row);
+    
+//     for (let j = 1; j <= i; j++) {
+//         row += "*" 
+//     }
+
+//     console.log(row);
+// }
+
+
