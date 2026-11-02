@@ -1,105 +1,105 @@
-let fun1 = () => {
-    console.log("arrow function is running")
+// blocking
+// non - blocking
+
+
+// async  await 
+
+
+// https://jsonplaceholder.typicode.com/users
+
+async function getData() {
+    let url = await fetch("https://jsonplaceholder.typicode.com/users")
+    let data = await url.json();
+    console.log("data", data);
+
+    let showdata = ""
+    data.map((v, i) => (
+        showdata += `
+         <div class="col-lg-3">
+      <div class="card">
+      ${v.name}
+      </div>
+     </div>
+        `
+    ))
+
+    document.getElementById("name").innerHTML = showdata
 }
 
+getData()
 
+// json = javascript object notation 
+// [ { } , { }] 
 
-// setTimeout(() => {
-//     
-// }, 5000);
+// push ,pop , shift , unshift  , concat , sort , join , reverse ,split 
+// map , filter , find
+let arr = [1, 2, 2, 3, 4, 5]
 
-// let date = new Date()
+console.log(arr.map((v, i) => v * 2));
+console.log(arr);
 
-// setInterval(() => {
-//     console.log(date.getSeconds());
-
-//     fun1()
-// }, 1000);
-
-
-// for , while , do while 
-
-// for(initialization ; condition ; +/-){
-// statement 
-// }
-
-// for(i=5 ; i >= 0 ; i--){
-//     console.log(i);
-// }
-
-// initialization
-// while(condition){
-//     statment()
-//     +/-
-// }
-
-// let i = 0
-// while(i <=5){
-//     console.log(i);
-//     i++
-
-// }
+console.log(arr.filter((v,i)=> v == 2));
+console.log(arr.find((v,i)=> v == 2));
 
 
 
-// function checkPassword() {
+let arr1 = ["az", "b", "a"]
 
-//     let correctPassword = "ilife123"
+// console.log(arr);
+// console.log(arr.sort());
+// console.log(arr1.sort());
 
-//     let password = prompt("enter you password")
-//     // while (correctPassword != password) {
-//     //     alert("incorrect password")
-//     //     password = prompt("enter you password")
-//     // }
-    
+// lexicographically  [3] = 0 [1] = 1
+// [4] = 0
+// console.log(arr1.concat(arr));
 
-//     alert("password is correct")
-// }
-// checkPassword()
+// 1,2,3,4,5
+// 0,1,2,3,4
 
 
-// function checkPassword() {
-
-//     // let correctPassword = "ilife123"
-
-//     let password = prompt("enter you password")
-   
-
-//     for(correctPassword = "ilife123";correctPassword != password ;){
-//         alert("incorrect password")
-//         password = prompt("enter you password")
-//     }
-
-//     alert("password is correct")
-// }
-// checkPassword()
+// 1,2,3,4,5
+// 1,2,3,4,5
 
 
-// ininitialization
-// do{
-// statememt()
-// }
-// while(condition)
+// 1,2,3
+
+// console.log(arr.slice(0,1));
+// console.log(arr.splice(0,2,"mahes"));
+// console.log(arr);
 
 
-// let age = 18
-// let vote =18
-// do{
-//     console.log("you're eligible");
-    
-// }
-// while(age == vote)
+// let name = "ilife"
+//  efili
+
+// console.log(name.split("").reverse().join(""));
 
 
-// for (let i = 1; i <= 5; i++) {
-//     let row = "";
-//     console.log(row);
-    
-//     for (let j = 1; j <= i; j++) {
-//         row += "*" 
-//     }
 
-//     console.log(row);
-// }
+
+
+
+// console.log(arr.unshift(0));
+// console.log(arr);
+
+// console.log(arr.shift());
+
+// console.log(arr);
+
+
+
+
+// console.log(arr);
+
+// console.log(arr.push(6));
+
+
+// console.log(arr);
+
+
+
+// console.log(arr.pop());
+// console.log(arr);
+
+
 
 
