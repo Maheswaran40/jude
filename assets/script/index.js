@@ -58,6 +58,7 @@ function showData() {
                     <div class="card-body">
                     <span>${value.name}</span>
                     <span>$${value.price}</span>
+                    <button class="btn btn-info" onclick="cartFun(${value.id})">Cart</button>
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@ function searchFun(e) {
     e.preventDefault()
     let searchData = document.getElementById("input").value
 
-    let outputData = products.filter((v, i) => v.name.toLowerCase().trim().includes(searchData.toLowerCase().trim()) )
+    let outputData = products.filter((v, i) => v.name.toLowerCase().trim().includes(searchData.toLowerCase().trim()))
     console.log(outputData);
 
     let data = ""
@@ -98,3 +99,60 @@ function searchFun(e) {
 
 
 }
+
+
+let cart = []
+
+function cartFun(proID) {
+    // alert(proID)
+    let selectedProduct = products.find((v, i) => v.id == proID)
+    console.log(selectedProduct);
+
+    let existing = cart.find((v) => v.id == proID)
+
+    if (!existing) {
+        alert("product added")
+        cart.push(selectedProduct)
+        selectedProduct.quantity = 1
+
+    }
+    else {
+        alert("quantity increased")
+
+        selectedProduct.quantity++
+    }
+
+    console.log(cart);
+    showCart(cart)
+
+}
+
+function showCart(cartData) {
+
+    let data = " "
+    cartData.map((v, i) => (
+        data += `
+        <tr>
+            <td><img src="${v.image}" height="100px" width="100px" alt=""></td>
+            <td>${v.name}</td>
+            <td>${v.price}</td>
+            <td>${v.quantity}</td>
+            <td><button class="btn-close" onclick="deletePro(${v.id})"></button></td>
+        </tr>
+        `
+    ))
+
+    document.getElementById("cartData").innerHTML = data
+}
+
+
+function deletePro(proID){
+    alert(proID)
+
+
+    cart = cart.filter((v)=>v.id != proID)
+    console.log("deletedItem");
+    
+    showCart(cart)
+}
+
